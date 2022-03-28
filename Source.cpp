@@ -129,7 +129,6 @@ public:
         for (const string& word : words)
         {
             words_to_documents[word].insert(document_id);
-            documents_to_words[document_id].insert(word);
         }
     }
 
@@ -171,7 +170,6 @@ private:
     };
 
     map<string, set<DOC_ID>> words_to_documents;
-    map<DOC_ID, set<string>> documents_to_words;
 
     set<string> stop_words_;
 
